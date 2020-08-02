@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- responsive phù hợp cho các thiêt bị khác -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buoi 6 html</title>
+    <!-- convert layout to html | css | javascript | responsive-->
+    <link rel="stylesheet" href="style/myStyle.css">
+
+</head>
+<body>
+    <div class="boderRed">
+        <h1>header</h1>
+        <p>first css</p>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            1
+        </div>
+        <div class="gid-item2"></div>
+        <div class="grid-item3">
+            2
+        </div>
+    </div>
+
+
+    <a href="http:\\google.com.vn" title="đay là đường link đến trang google">google</a>
+    <!-- get | post | put | delete -->
+    <!-- get đẩy hết dữ liệu trong thẻ form lên url, dùng để view dữ liệu-->
+    <!-- put edit update-->
+    <!-- post đẩy dữ liệu xuống network, create -->
+    <form action="http:\\google.com.vn" method="GET" name="create">
+        <!-- action: gửi dữ liệu đến nơi cần xử lý -->
+        <!-- name: unique -->
+        <!-- readonly='readonly' --> 
+        <input type="number" name="txtUsername" placeholder="tên đăng nhập" > 
+        <input name="txtPasswrod" placeholder="mật khẩu" type="password">
+        <br> 
+        <div>
+            <input type="checkbox" checked name="chkRemember" id="" >
+            <!--  -->
+            <label for="name">luu lai mat khau</label>
+        </div>
+        <button type="submit">submit</button>
+    </form>
+
+    <form action="#" method="POST" name="formLogin">
+        <label for="">tên đăng nhập</label>
+        <input type="text" name="txtUsername" id="txtUsername" placeholder="Tên đăng nhập">
+        <label for="">Mật khẩu</label>
+        <input type="password" name="txtPasswrod" id="txtUsername" placeholder="Tên đăng nhập">
+        <button type="submit">ĐĂNG NHẬP</button>
+    </form>
+</body>
+</html>

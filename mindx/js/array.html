@@ -13,7 +13,7 @@
         let newName
         alert(player)
         // answer = prompt('ban co muon thay cau thu khong (y/n)')
-        // // while(answer != 'y'|| answer != 'Y'|| answer != 'n'|| answer != 'N'){
+        // // while(answer != 'y'| answer != 'Y'| answer != 'n'| answer != 'N'){
         // //     answer = prompt('nahp lai cau tra loi')
         // // }
         // name = prompt('nhap ten cau thu ban muon thay doi')
@@ -39,7 +39,7 @@
          
         answer = prompt('welcome to our shop, what do u want (C, R, U, D)')
         let item = ['t-shirt', 'sweater']
-        if (answer == 'r' || answer == 'R'){
+        if (answer == 'r' | answer == 'R'){
             console.log('our items: '+ item)
         } 
         // if (answer == 'c' || answer == 'C'){
@@ -47,7 +47,20 @@
         //     item.push(newItem)
         //     console.log()
         // }
+        
+        
 
+        let input = ['grey','mary','devon','james']
+
+        for (let i = 0;i<input.length;i++){
+            if(input[i] == 'devon'){
+                delete input[i]
+                console.log(input)
+                input.splice(i,0,'asdada','dfsdfsdf')
+                console.log(input)
+                break;
+            }
+        }
 
     </script>
 </body>
