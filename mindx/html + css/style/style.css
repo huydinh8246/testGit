@@ -1,3 +1,54 @@
-h2 {
-    color: aquamarine;
+body {
+    margin: 0;
+    padding: 0;
 }
+
+.wrapper {
+    width: 1200px;
+    margin: auto;
+}
+
+.mb10 {
+    margin: 10px;
+}
+
+.app-layout {
+    display: grid;
+    /* 1 */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* 2 */
+    grid-template-rows: 100vh;
+    /* 3 */
+}
+
+@media screen and (max-width: 1024px) {
+    .app-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50vh 50vh;
+    }
+}
+
+.tweets   {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row: 1;
+  }
+  
+  .replies  {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 1;
+  }
+  
+  .search   {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row: 1;
+  }
+  
+  .messages {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row: 1;
+  }

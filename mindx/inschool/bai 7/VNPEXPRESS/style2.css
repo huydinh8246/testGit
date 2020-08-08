@@ -1,0 +1,25 @@
+body {
+    /* background-color: aqua; */
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: auto;
+}
+
+.menu ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+
+.icon-menu {
+    width: 20px;
+}
+
