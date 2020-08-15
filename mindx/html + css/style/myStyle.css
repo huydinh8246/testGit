@@ -1,0 +1,29 @@
+/* body {
+    background-color: orchid;
+} */
+
+.boderRed h1 {
+    background-color: red;
+    height: 20px;
+    text-align: center;
+    font-size: medium;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 70% auto 29% ;
+    height: 300px;
+}
+
+.grid-item{
+    background-color: aquamarine;
+}
+
+
+.grid-item2{
+    background-color: brown;
+}
+
+.grid-item3{
+    background-color: blueviolet;
+}

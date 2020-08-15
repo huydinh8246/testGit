@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let player = ['Ronaldo','Messi','Neymar']
+        let answer
+        let name
+        let newName
+        alert(player)
+        // answer = prompt('ban co muon thay cau thu khong (y/n)')
+        // // while(answer != 'y'| answer != 'Y'| answer != 'n'| answer != 'N'){
+        // //     answer = prompt('nahp lai cau tra loi')
+        // // }
+        // name = prompt('nhap ten cau thu ban muon thay doi')
+        // var check = player.indexOf(name)
+        // while (check == -1){
+        //     name = prompt('nhap lai ten cau thu can thay doi')
+        // }
+        // newName = prompt('nhap ten cau thu moi')
+        // player[check]=newName
+        // alert(player)
+
+
+        // player = ['Ronaldo','Messi','Neymar']
+        // answer = prompt('ban co muon thay cau thu khong (y/n)')
+        // name = prompt('nhap ten cau thu ban muon xoa')
+        // var check = player.indexOf(name)
+        // while (check == -1){
+        //     name = prompt('nhap lai ten cau thu can xoa')
+        // }
+        // player.splice(check,0)
+        // player[check]=newName
+        // alert(player)
+         
+        answer = prompt('welcome to our shop, what do u want (C, R, U, D)')
+        let item = ['t-shirt', 'sweater']
+        if (answer == 'r' | answer == 'R'){
+            console.log('our items: '+ item)
+        } 
+        // if (answer == 'c' || answer == 'C'){
+        //     let newItem = prompt('Enter new item:')
+        //     item.push(newItem)
+        //     console.log()
+        // }
+        
+        
+
+        let input = ['grey','mary','devon','james']
+
+        for (let i = 0;i<input.length;i++){
+            if(input[i] == 'devon'){
+                delete input[i]
+                console.log(input)
+                input.splice(i,0,'asdada','dfsdfsdf')
+                console.log(input)
+                break;
+            }
+        }
+
+    </script>
+</body>
+</html>
