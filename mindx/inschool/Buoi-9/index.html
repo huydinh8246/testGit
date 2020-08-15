@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function showNumber(a = 0, b = 0){
+
+        function showNumber(a, b) {
+            let number = prompt("Please enter your name", "Harry Potter");
+            number = number.split(',')
+            let numberA = parseInt(number[0] || 0);
+            let numberB = parseInt(number[1] || 0);
+            // let numberA = parseInt(a) ? parseInt(a) : 0;
+            // let numberB = parseInt(b) ? parseInt(b) : 0;
+            // if(numberA === numberB && numberA > 0){
+            //     alert("Xu ly");
+            // }
+            // alert("Khong Xu Ly");
+
+            // if() {
+
+            // }else if(){
+
+            // }else if(){
+
+            // }else{
+
+            // }
+
+            // (numberA === numberB) ? (
+            //     alert(
+            //         !isNaN(numberA + numberB) ? (numberA + numberB) : 0
+            //     )
+            // ) : (
+            //     alert(
+            //         !isNaN(numberA * numberB) ? (numberA * numberB) : 0
+            //     )
+            // )
+
+            (numberA === numberB) ? alert(numberA + numberB): alert(numberA * numberB)
+        }
+
+        function useSwitchCase() {
+            let number = prompt("Please enter your name", "Harry Potter");
+            switch (parseInt(number)) {
+                case 5:
+                    alert("So 5")
+                    break;
+                case 1:
+                    alert("So 1")
+                    break;
+                case 2:
+                    alert("So 2")
+                    break;
+                default:
+                    alert("Khong co gi tri");
+                    break;
+            }
+        }
+        useSwitchCase();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
