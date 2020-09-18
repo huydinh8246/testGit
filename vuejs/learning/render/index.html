@@ -10,23 +10,34 @@
 
 <body>
     <div id="app">
+        <!-- v-once use one and not change -->
+        <h1 v-once> {{ title }}</h1>
         <!-- v-on: keep whole <div id='app'> is in under Vue's control -->
         <!-- v-on tell Vue: listen to some event -->
         <input type='text' v-on:input="changeTitle">
         <p>
-            {{ title }}
+            {{ title }} - <a v-bind:href="link">Google</a>
         </p>
+        <hr>
+        <!-- render raw html -->
+        <p> {{ finishedLink }}</p>
+        <p v-html="finishedLink"></p>
     </div>
 
     <script>
         let app = new Vue({
             el: '#app',
             data: {
-                title: 'hello world!'
+                title: 'hello world!',
+                link: 'https:\\google.com.vn',
+                finishedLink: '<a href="link">Google</a>',
             },
             methods: {
                 changeTitle: function (event) {
                     this.title = event.target.value;
+                },
+                sayHello: function () {
+                    return this.title;
                 }
             },
         })
