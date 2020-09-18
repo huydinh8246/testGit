@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex2</title>
+</head>
+<body>
+    <script>
+        const avr = (score1,score2,score3) => {
+            if(+score1 && +score2 && +score3){
+                return (score1+score2+score3)/3
+            }
+        }
+
+        let jScore = avr(89, 120, 103)
+        let mScore = avr(116, 94, 123)
+        let mrScore = avr(97, 134, 105)
+
+        console.log(`John's team average score: ${jScore}`);
+        console.log(`Mike's team average score: ${mScore}`);
+        console.log(`Mary's team average score: ${mrScore}`);
+
+        if (jScore < mScore && mrScore < mScore) {
+            console.log(`The winner is Mike's team `);
+        } else if (mScore < jScore && mrScore < jScore) {
+            console.log(`The winner is John's team `);
+        } else if (mScore == jScore && mrScore == jScore){
+            console.log(`Raw`);
+        } else {
+            console.log(`The winner is Marry's team `);
+        }
+    </script>
+</body>
+</html>

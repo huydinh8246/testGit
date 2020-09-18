@@ -30,8 +30,4 @@ branch
 baseball score
 */
 
-let john = [89,120,103]
-let mike = [116,94,123]
 
-let total, avr
-total = 0
