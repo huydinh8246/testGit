@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id='app'>
+        <button v-on:click="increase(2, $event)">click me</button>
+        <button v-on:click="counter++">click me (2)</button>
+        <p> {{ counter }} </p>
+        <!-- mix html with javascript -->
+        <p> {{ counter % 2 == 0 ? `even` : `odd` }}</p>
+        <p v-on:mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }}
+            - <span v-on:mousemove.stop='dummy'>DEAD SPOT</span>
+        </p>
+        <input type="text" v-on:keyup.enter='alertMe'>
+        <!-- two-way-binding data  -->
+        <p>the name is {{ name }}</p>
+        <input type="text" v-model="name">
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                name: 'Huy',
+                counter: 0,
+                x: 0,
+                y: 0,
+            },
+            methods: {
+                increase: function (step, event) {
+                    this.counter += step;
+                },
+                updateCoordinates: function (x) {
+                    this.x = x.clientX;
+                    this.y = x.clientY;
+                },
+                alertMe: function () {
+                    alert(alert)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<script src="https://npmcdn.com/vue/dist/vue.js"></script>
+<div id="exc">
+    <div>
+        <button v-on:click="showAlert">Show Alert</button>
+    </div>
+
+    <div>
+        <input type="text" v-on:keydown.enter="getTyped">
+        <p>{‌{ value }}</p>
+    </div>
+</div>
+
+<script>
+    new Vue({
+        el:'#exc',
+        data: {
+
+        },
+        methods: {
+            showAlert: function () {
+                alert('Button clicked!');
+            },
+            getTyped: function (event) {
+                this.value = event.target.value;
+            }
+        }
+    })
+
+    new Vue({
+        el: '#hello',
+        data: {
+            value: ''
+        },
+        methods: {
+            showAlert: function () {
+                alert('You clicked the mouse');
+            }
+        }
+    });
+</script>
