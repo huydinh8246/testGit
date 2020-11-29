@@ -1,6 +1,9 @@
 <template>
   <div>
     <div class="container">
+      <list-data></list-data>
+    </div>
+    <div class="container">
       <div class="block" :class="{ animate: animatedBlock }"></div>
       <button @click="animateBlock">Animate</button>
     </div>
@@ -11,7 +14,9 @@
     <div class="container">
       <!-- transition contain only one direct child element -->
       <!-- <transition enter-active-class="..." enter-to-class="...."> -->
+      <!-- :css=fale does not use css -->
       <transition
+        :css="false"
         name="para"
         @before-enter="beforeEnter"
         @enter="enter"
@@ -39,7 +44,12 @@
 </template>  
 
 <script>
+import ListData from "./components/ListData.vue";
+
 export default {
+  components: {
+    ListData,
+  },
   data() {
     return {
       animatedBlock: false,
@@ -52,11 +62,21 @@ export default {
     beforeEnter(el) {
       console.log("beforeenter");
       console.log(el);
+      el.style.opacity = 0;
     },
-    enter(el) {
+    enter(el, done) {
+      //done function: let vue know when done
       console.log("beforeenter");
       console.log(el);
-      el.style.opacity = 0;
+      let round = 1;
+      const interval = setInterval(function () {
+        el.style.opacity = round * 0.01;
+        round++;
+      }, 20); //execute every 20s
+      if (round > 10) {
+        clearInterval(interval);
+        done();
+      }
     },
     beforeleave(el) {
       console.log("aftereenter");
